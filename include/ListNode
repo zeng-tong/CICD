@@ -1,0 +1,54 @@
+//
+// Created by tong zeng on 2018/7/1.
+//
+
+#ifndef OFFER_LISTNODE_H
+#define OFFER_LISTNODE_H
+
+#include <string>
+#include <sstream>
+#include <vector>
+#include <iostream>
+
+struct ListNode {
+    int val;
+    struct ListNode *next;
+
+    ListNode(int x) :
+            val(x), next(NULL) {
+    }
+};
+
+ListNode *readList(const std::string &str) {
+    if (str.empty())
+        return nullptr;
+    std::istringstream is(str);
+    std::vector<int> values;
+    std::string number;
+    while (getline(is, number, ',')) {
+        values.push_back(stoi(number));
+    }
+    auto *dummy = new ListNode(1);
+    auto tmp = dummy;
+    for (auto e: values) {
+        dummy->next = new ListNode(e);
+        dummy = dummy->next;
+    }
+    auto res = tmp->next;
+    delete tmp;
+    return res;
+}
+
+void printList(ListNode *ptr) {
+    if (ptr == nullptr) {
+        std::cout << "NULL" << std::endl;
+        return;
+    }
+    while (ptr->next) {
+        std::cout << ptr->val << "->";
+        ptr = ptr->next;
+    }
+    std::cout << ptr->val << std::endl;
+}
+
+#endif //OFFER_LISTNODE_H

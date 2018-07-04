@@ -1,0 +1,148 @@
+//
+// Created by tong zeng on 2018/7/1.
+//
+
+#ifndef OFFER_TREENODE_H
+#define OFFER_TREENODE_H
+
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+
+    TreeNode(int x) :
+            val(x), left(NULL), right(NULL) {
+    }
+};
+
+TreeNode *readTree(const string &input) {
+    TreeNode *res = nullptr;
+    if (input.empty())
+        return res;
+    istringstream is(input);
+
+    string val;
+    queue<TreeNode *> q;
+    getline(is, val, ',');
+    res = new TreeNode(stoi(val));
+    q.push(res);
+
+    while (getline(is, val, ',')) {
+        auto root = q.front(); q.pop();
+        auto left = new TreeNode(stoi(val));
+        root->left = left;
+        q.push(left);
+
+        if (getline(is, val, ',')) {
+            auto right = new TreeNode(stoi(val));
+            root->right = right;
+            q.push(right);
+        }
+    }
+    return res;
+}
+
+const int LEVEL = 0;
+const int PREORDER = 1;
+const int INORDER = 2;
+const int POSTORDER = 3;
+/*
+ * todo: printTree
+void printTree(TreeNode* root, int how) {
+    class Solution {
+    public:
+        vector<vector<int>> levelOrder(TreeNode *root) {
+            if (root == nullptr) return vector<vector<int> >();
+
+            deque<Guide> path;
+            int level = 0;
+            vector<vector<int> > result;
+            if (how == LEVEL || how == PREORDER) {
+                path.push_back(createGuide(PRINT, level, root));
+                path.push_back(createGuide(VISIT, level + 1, root->left));
+                path.push_back(createGuide(VISIT, level + 1, root->right));
+            }
+
+            vector<int> nums;
+            int lastlevel = 0;
+            while (!path.empty()) {
+                struct Guide current = path.front();
+                path.pop_front();
+                if (current.ptr == nullptr) continue;
+
+                if (current.op == PRINT) {
+                    if (how == LEVEL && current.level != lastlevel) {
+                        result.push_back(nums);
+                        nums.clear();
+                        nums.push_back(current.ptr->val);
+                        lastlevel = current.level;
+                    } else {
+                        nums.push_back(current.ptr->val);
+                    }
+                } else {
+                    switch (how) {
+                        case LEVEL: {
+                            path.push_front(createGuide(PRINT, current.level, current.ptr));
+                            path.push_back(createGuide(VISIT, current.level + 1, current.ptr->left));
+                            path.push_back(createGuide(VISIT, current.level + 1, current.ptr->right));
+                            break;
+                        }
+                        case PREORDER: {
+                            path.push_front(createGuide(PRINT, current.level, current.ptr));
+                            path.push_front(createGuide(VISIT, current.level + 1, current.ptr->left));
+                            path.push_front(createGuide(VISIT, current.level + 1, current.ptr->right));
+                            break;
+                        }
+                        case INORDER: {
+                            path.push_front(createGuide(PRINT, current.level, current.ptr));
+                            path.push_front(createGuide(VISIT, current.level + 1, current.ptr->left));
+                            path.push_front(createGuide(VISIT, current.level + 1, current.ptr->right));
+                            break;
+                        }
+                        case POSTORDER: {
+
+                            break;
+                        }
+                    }
+                }
+            }
+            result.push_back(nums);
+            return result;
+        }
+
+    private:
+        const static int VISIT = 0;
+        const static int PRINT = 1;
+
+        struct Guide {
+            int op;
+            int level;
+            TreeNode *ptr;
+
+            Guide(int operate, int lev, TreeNode *node) : op(operate), level(lev), ptr(node) {}
+
+            Guide() {}
+        };
+
+        Guide createGuide(int o, int l, TreeNode *node) {
+            struct Guide tmp(o, l, node);
+            return tmp;
+        }
+    };
+
+    static int _____ = []() {
+        std::ios::sync_with_stdio(false);
+        cin.tie(NULL);
+        return 0;
+    }();
+}*/
+
+#endif //OFFER_TREENODE_H

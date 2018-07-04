@@ -1,0 +1,36 @@
+cmake_minimum_required(VERSION 3.8)
+project(offer)
+
+include_directories("include")
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES src/main.cpp)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "excutables")
+
+add_executable(offer ${SOURCE_FILES})
+
+add_executable(longest_common_prefix src/LongestCommonPrefix.cpp)
+
+add_executable(graph_circle src/GraphCircle.cpp)
+
+add_executable(deleteDuplication src/deleteDuplication.cpp)
+
+add_executable(circleEntry src/circleEntry.cpp)
+
+add_executable(binaryTreeNext src/binaryTreeNextNode_inorder.cpp)
+
+add_executable(isSymmetrical src/isSymmetrical.cpp)
+
+add_executable(LevelPrintBinaryTree src/LevelPrintBinaryTree.cpp)
+
+add_executable(kthOfBST src/kthOfBST.cpp)
+
+add_executable(matrixHasPath src/hasPath.cpp)
+
+add_executable(serializeBinaryTree src/SerializeBinaryTree.cpp)
+
+add_executable(maxInWindows src/maxInWindows.cpp)
+
+add_executable(Trie src/trie.cpp)

@@ -1,0 +1,15 @@
+// 
+// Created by tong zeng on 2018/7/4 5:44 PM.
+//
+
+#ifndef OFFER_COMMONHEADER_H
+#define OFFER_COMMONHEADER_H
+
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <sstream>
+#include <string>
+
+using namespace std;
+#endif //OFFER_COMMONHEADER_H
