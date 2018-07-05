@@ -36,3 +36,5 @@ add_executable(maxInWindows src/maxInWindows.cpp)
 add_executable(Trie src/trie.cpp)
 
 add_executable(MedianFromDataStream src/MedianFromDataStream.cpp)
+
+add_executable(FirstUniqueCharInString src/FirstUniqueCharInString.cpp)
