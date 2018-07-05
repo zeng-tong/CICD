@@ -34,3 +34,5 @@ add_executable(serializeBinaryTree src/SerializeBinaryTree.cpp)
 add_executable(maxInWindows src/maxInWindows.cpp)
 
 add_executable(Trie src/trie.cpp)
+
+add_executable(MedianFromDataStream src/MedianFromDataStream.cpp)
