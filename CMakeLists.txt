@@ -38,3 +38,5 @@ add_executable(Trie src/trie.cpp)
 add_executable(MedianFromDataStream src/MedianFromDataStream.cpp)
 
 add_executable(FirstUniqueCharInString src/FirstUniqueCharInString.cpp)
+
+add_executable(MovingCount src/MovingCount.cpp)
