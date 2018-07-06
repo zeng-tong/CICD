@@ -40,3 +40,5 @@ add_executable(MedianFromDataStream src/MedianFromDataStream.cpp)
 add_executable(FirstUniqueCharInString src/FirstUniqueCharInString.cpp)
 
 add_executable(MovingCount src/MovingCount.cpp)
+
+add_executable(RegularExpressionMatching src/RegularExpressionMatching.cpp)
