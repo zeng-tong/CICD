@@ -42,3 +42,5 @@ add_executable(FirstUniqueCharInString src/FirstUniqueCharInString.cpp)
 add_executable(MovingCount src/MovingCount.cpp)
 
 add_executable(RegularExpressionMatching src/RegularExpressionMatching.cpp)
+
+add_executable(IsNumeric src/IsNumeric.cpp)
