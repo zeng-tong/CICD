@@ -46,3 +46,5 @@ add_executable(RegularExpressionMatching src/RegularExpressionMatching.cpp)
 add_executable(IsNumeric src/IsNumeric.cpp)
 
 add_executable(JumpGameII src/JumpGameII.cpp)
+
+add_executable(StackSequence src/StackSequence.cpp)
