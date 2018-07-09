@@ -44,3 +44,5 @@ add_executable(MovingCount src/MovingCount.cpp)
 add_executable(RegularExpressionMatching src/RegularExpressionMatching.cpp)
 
 add_executable(IsNumeric src/IsNumeric.cpp)
+
+add_executable(JumpGameII src/JumpGameII.cpp)
