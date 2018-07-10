@@ -50,3 +50,5 @@ add_executable(JumpGameII src/JumpGameII.cpp)
 add_executable(StackSequence src/StackSequence.cpp)
 
 add_executable(ReverseLinkList src/ReverseLinkList.cpp)
+
+add_executable(FindLastKthNodeOfLinkList src/FindLastKthNodeOfLinkList.cpp)
