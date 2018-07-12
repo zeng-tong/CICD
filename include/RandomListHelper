@@ -1,0 +1,43 @@
+// 
+// Created by tong zeng on 2018/7/12 7:28 PM.
+//
+
+#ifndef OFFER_RANDOMLISTHELPER_H
+#define OFFER_RANDOMLISTHELPER_H
+
+#include <unordered_map>
+#include "commonHeader"
+
+#define RandomNumber(len) static_cast<int>(random() % (len * 2))
+
+struct RandomListNode {
+    int label;
+    RandomListNode *next, *random;
+
+    explicit RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
+};
+
+RandomListNode *generateRandomList(int len) {
+    srand(static_cast<unsigned int>(time(nullptr)));
+    cout << time(nullptr) << endl;
+    if (len == 0)
+        return nullptr;
+    vector<RandomListNode *> record;
+    auto current = new RandomListNode(RandomNumber(len));
+    auto res = current;
+
+    record.push_back(current);
+    for (int i = 1; i < len; ++i) {
+        current->next = new RandomListNode(RandomNumber(len));
+        current = current->next;
+        record.push_back(current);
+    }
+    current = res;
+    while (current) {
+        current->random = record[random() % len];
+        current = current->next;
+    }
+    return res;
+}
+
+#endif //OFFER_RANDOMLISTHELPER_H
