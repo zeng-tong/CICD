@@ -56,3 +56,5 @@ add_executable(FindLastKthNodeOfLinkList src/FindLastKthNodeOfLinkList.cpp)
 add_executable(MergeList src/MergeList.cpp)
 
 add_executable(ComplexListClone src/ComplexListClone.cpp)
+
+add_executable(IntersectionNode src/IntersectionListNode.cpp)
