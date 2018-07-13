@@ -14,7 +14,7 @@ public:
         auto slower = pHead->next;
         auto faster = pHead->next->next;
         while(faster != slower) {
-            if (faster->next == nullptr) return nullptr;
+            if (faster == nullptr || faster->next == nullptr) return nullptr;
             faster = faster->next->next;
             slower = slower->next;
         }
