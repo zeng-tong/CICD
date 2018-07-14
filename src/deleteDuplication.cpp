@@ -7,6 +7,7 @@
 #include "ListNode"
 using namespace std;
 
+/*
 class Solution {
 public:
     static ListNode* deleteDuplication(ListNode* pHead) {
@@ -45,4 +46,57 @@ int main() {
         printList(Solution::deleteDuplication(root));
     }
     return 0;
+}*/
+
+class Solution {
+public:
+    static ListNode* deleteDuplicates(ListNode* head) {
+        if (head == nullptr)
+            return nullptr;
+        ListNode dummyNode(1);
+        dummyNode.next = head;
+        auto pre = &dummyNode;
+        while (pre && pre->next) {
+            auto current = pre->next;
+            auto nextNotSame = getNextNotSame(current);
+            if (current->next != nextNotSame) {
+                removeNodes(pre, nextNotSame);
+            } else {
+                pre = pre->next;
+            }
+        }
+        return dummyNode.next;
+    }
+
+private:
+    static ListNode* getNextNotSame(ListNode* head) {
+        if (head == nullptr)
+            return nullptr;
+        auto current = head;
+        while(current && current->val == head->val) {
+            current = current->next;
+        }
+        return current;
+    }
+    static void removeNodes(ListNode* pre, ListNode* end) {
+        if (pre == nullptr)
+            return;
+        while (pre->next != end) {
+            if (pre->next == nullptr) {
+                return;
+            }
+            auto current = pre->next;
+            auto tmp = current->next;
+            delete current;
+            pre->next = tmp;
+        }
+    }
+};
+
+int main() {
+    string lists;
+    while(getline(cin, lists)) {
+        auto head = readList(lists);
+        printList(Solution::deleteDuplicates(head));
+    }
 }
