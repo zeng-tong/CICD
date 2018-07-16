@@ -11,6 +11,6 @@
 #include <sstream>
 #include <string>
 #include <set>
-
+#include <unordered_map>
 using namespace std;
 #endif //OFFER_COMMONHEADER_H

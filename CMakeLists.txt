@@ -58,3 +58,5 @@ add_executable(MergeList src/MergeList.cpp)
 add_executable(ComplexListClone src/ComplexListClone.cpp)
 
 add_executable(IntersectionNode src/IntersectionListNode.cpp)
+
+add_executable(ReconstructBinaryTree src/ReconstructBinaryTree.cpp)
