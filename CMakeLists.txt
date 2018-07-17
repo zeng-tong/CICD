@@ -68,3 +68,5 @@ add_executable(FindPathInBinaryTree src/FindPathInBinaryTree.cpp)
 add_executable(ConvertBstToLinklist src/ConvertBstToLinklist.cpp)
 
 add_executable(BinaryTreeDepth src/BinaryTreeDepth.cpp)
+
+add_executable(BalancedBinaryTree src/BalancedBinaryTree.cpp)
