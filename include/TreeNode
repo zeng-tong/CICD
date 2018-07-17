@@ -37,11 +37,12 @@ TreeNode *readTree(const string &input) {
 
     while (getline(is, val, ',')) {
         auto root = q.front(); q.pop();
-        auto left = new TreeNode(stoi(val));
-        root->left = left;
-        q.push(left);
-
-        if (getline(is, val, ',')) {
+        if (val != "null") {
+            auto left = new TreeNode(stoi(val));
+            root->left = left;
+            q.push(left);
+        }
+        if (getline(is, val, ',') && val != "null") {
             auto right = new TreeNode(stoi(val));
             root->right = right;
             q.push(right);
