@@ -64,3 +64,5 @@ add_executable(ReconstructBinaryTree src/ReconstructBinaryTree.cpp)
 add_executable(IsSubTree src/IsSubTree.cpp)
 
 add_executable(FindPathInBinaryTree src/FindPathInBinaryTree.cpp)
+
+add_executable(ConvertBstToLinklist src/ConvertBstToLinklist.cpp)
