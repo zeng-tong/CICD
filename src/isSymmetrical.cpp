@@ -5,22 +5,23 @@
 
 class Solution {
 public:
-    static bool isSymmetrical(TreeNode* pRoot) {
-        if (pRoot == nullptr) return true;
-        return isSym(pRoot->left, pRoot->right);
+    static bool isSymmetrical(TreeNode *root) {
+        return root == nullptr || symmetrical(root->left, root->right);
     }
 
 private:
-    static bool isSym(TreeNode* left, TreeNode* right){
-        if (left == nullptr && right == nullptr) return true;
-        if (left == nullptr || right == nullptr || left->val != right->val) return false;
-        return isSym(left->right, right->left) && isSym(left->left, right->right);
+    static bool symmetrical(TreeNode *left, TreeNode *right) {
+        if (left == nullptr && right == nullptr)
+            return true;
+        if (left == nullptr || right == nullptr || left->val != right->val)
+            return false;
+        return symmetrical(left->left, right->right) && symmetrical(left->right, right->left);
     }
 };
 
-int main(){
+int main() {
     string input;
-    while(getline(cin, input)) {
+    while (getline(cin, input)) {
         auto treeNode = readTree(input);
         cout << Solution::isSymmetrical(treeNode) << endl;
     }
