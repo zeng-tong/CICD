@@ -72,3 +72,5 @@ add_executable(BinaryTreeDepth src/BinaryTreeDepth.cpp)
 add_executable(BalancedBinaryTree src/BalancedBinaryTree.cpp)
 
 add_executable(GetNextNodeOfTree src/GetNextNodeOfTree.cpp)
+
+add_executable(PrintShapeZOfTree src/PrintShapeZOfTree.cpp)
