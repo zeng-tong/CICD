@@ -77,3 +77,5 @@ add_executable(PrintShapeZOfTree src/PrintShapeZOfTree.cpp)
 add_executable(Permutation src/Permutation.cpp)
 
 add_executable(RotateString src/RotateString.cpp)
+
+add_executable(ReverseSentence src/ReverseSentence.cpp)
