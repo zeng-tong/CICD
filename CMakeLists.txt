@@ -75,3 +75,5 @@ add_executable(GetNextNodeOfTree src/GetNextNodeOfTree.cpp)
 
 add_executable(PrintShapeZOfTree src/PrintShapeZOfTree.cpp)
 add_executable(Permutation src/Permutation.cpp)
+
+add_executable(RotateString src/RotateString.cpp)
