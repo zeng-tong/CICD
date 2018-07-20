@@ -18,6 +18,8 @@ private:
             return;
         }
         for(int i = pos; i < str.size(); ++ i) {
+            if (i != pos && str[i] == str[pos])
+                continue;
             swap(str[i], str[pos]);
             _permutation(str, pos + 1);
             swap(str[i], str[pos]);
