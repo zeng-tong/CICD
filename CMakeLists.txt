@@ -79,3 +79,5 @@ add_executable(Permutation src/Permutation.cpp)
 add_executable(RotateString src/RotateString.cpp)
 
 add_executable(ReverseSentence src/ReverseSentence.cpp)
+
+add_executable(atoi src/atoi.cpp)
