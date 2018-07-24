@@ -87,3 +87,5 @@ add_executable(Search2DMatrix src/Search2DMatrix.cpp)
 add_executable(ReorderArray src/ReorderArray.cpp)
 
 add_executable(SpiralMatrix src/SpiralMatrix.cpp)
+
+add_executable(MajorityElement src/MajorityElement.cpp)
