@@ -97,3 +97,5 @@ add_executable(CountAppearingInSortedArray src/CountAppearingInSortedArray.cpp)
 add_executable(SingleNumberII src/SingleNumber.cpp)
 
 add_executable(FindDuplicated src/FindDuplicatedNumber.cpp)
+
+add_executable(ProductExceptSelf src/ProductExceptSelf.cpp)
