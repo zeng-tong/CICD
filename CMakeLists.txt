@@ -93,3 +93,5 @@ add_executable(MajorityElement src/MajorityElement.cpp)
 add_executable(ConstructSmallestNumber src/ConstructSmallestNumber.cpp)
 
 add_executable(CountAppearingInSortedArray src/CountAppearingInSortedArray.cpp)
+
+add_executable(SingleNumberII src/SingleNumber.cpp)
