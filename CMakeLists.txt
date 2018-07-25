@@ -95,3 +95,5 @@ add_executable(ConstructSmallestNumber src/ConstructSmallestNumber.cpp)
 add_executable(CountAppearingInSortedArray src/CountAppearingInSortedArray.cpp)
 
 add_executable(SingleNumberII src/SingleNumber.cpp)
+
+add_executable(FindDuplicated src/FindDuplicatedNumber.cpp)
