@@ -103,3 +103,5 @@ add_executable(ProductExceptSelf src/ProductExceptSelf.cpp)
 add_executable(TopK src/TopK.cpp)
 
 add_executable(Strlen src/Strlen.cpp)
+
+add_executable(Memcpy src/Memcpy.cpp)
