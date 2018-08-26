@@ -111,3 +111,5 @@ add_executable(QuickSort src/QuickSort.cpp)
 add_executable(MergeSort src/MergeSort.cpp)
 
 add_executable(Heap src/Heap.cpp)
+
+add_executable(DecmailToHex src/DecToHex.cpp)
