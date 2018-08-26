@@ -107,3 +107,7 @@ add_executable(Strlen src/Strlen.cpp)
 add_executable(Memcpy src/Memcpy.cpp)
 
 add_executable(QuickSort src/QuickSort.cpp)
+
+add_executable(MergeSort src/MergeSort.cpp)
+
+add_executable(Heap src/Heap.cpp)
